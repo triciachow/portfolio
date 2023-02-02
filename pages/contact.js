@@ -1,19 +1,17 @@
-import Image from "next/image";
-import email from "../assets/email.svg";
+import Footer from "../components/Footer";
 
 export default function Contact() {
   return (
-    <>
-      <div className="min-h-screen flex flex-col items-center gap-y-8">
-        <h1 className="my-8 font-bold text-5xl text-sky-600 text-center">
-          Hey! Thanks for viewing <br /> my portfolio.
+    <div className="min-w-full min-h-screen px-6 xl:px-24 bg-circles bg-no-repeat bg-top bg-cover object-contain">
+      <div className="xl:py-[300px] lg:py-[300px] md:py-[300px] py-[150px]">
+        <h1 className="font-roboto uppercase text-5xl text-center my-6">
+          Hey, thank you for viewing my portfolio.
         </h1>
-        <div className="text-center font-bold">I&apos;m reachable via</div>
-        <div className="flex flex-col text-center gap-y-6">
-          <Image src={email} width="226" height="186" alt="" />
-          <div>suyeechow0212@gmail.com</div>
-        </div>
+        <h2 className="text-center font-roboto text-2xl uppercase">
+          I&apos;m reachable via suyeechow0212@gmail.com
+        </h2>
       </div>
-    </>
+      <Footer />
+    </div>
   );
 }

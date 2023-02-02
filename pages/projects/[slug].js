@@ -5,6 +5,7 @@ import Keywords from "../../components/projects/Keywords";
 import { Github, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { BLOCKS } from "@contentful/rich-text-types";
+import Footer from "../../components/Footer";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -81,46 +82,49 @@ export default function ProjectDetails({ project }) {
   } = project.fields;
 
   return (
-    <>
-      <div className="lg:w-8/12 xl:w-6/12 mx-auto py-6">
-        <Image
-          src={`https:${featuredImage.fields.file.url}`}
-          width={featuredImage.fields.file.details.image.width}
-          height={featuredImage.fields.file.details.image.height}
-          alt="Project image"
-        />
+    <div className="lg:w-8/12 xl:w-7/12 mx-auto pt-20 py-6 px-6 xl:px-24 ">
+      <header className="bg-sky-100 py-6 px-4 my-6">
+        <h1 className="text-center font-roboto uppercase xl:text-5xl text-3xl text-slate-900 tracking-wider">
+          {title}
+        </h1>
+        <p className="text-slate-900 text-center my-4">{description}</p>
+      </header>
+      <Image
+        src={`https:${featuredImage.fields.file.url}`}
+        width={featuredImage.fields.file.details.image.width}
+        height={featuredImage.fields.file.details.image.height}
+        alt="Project image"
+      />
 
-        <div className="flex gap-x-4 flex-wrap">
-          {keywords.map((keyword, index) => {
-            return <Keywords key={index} keyword={keyword} />;
-          })}
-        </div>
+      <div className="flex gap-x-2 flex-wrap mb-4">
+        {keywords.map((keyword, index) => {
+          return <Keywords key={index} keyword={keyword} />;
+        })}
+      </div>
 
-        <div className="flex flex-col gap-y-4">
-          <h1 className="text-5xl font-bold my-6">Project Title: {title}</h1>
-          <p>Description: {description}</p>
-          <div className="flex flex-col unreset">
-            {documentToReactComponents(fullDetails, renderOption)}
-          </div>
-        </div>
-        <div className="flex gap-x-8">
-          {githubLink && (
-            <Link href={githubLink}>
-              <button className="my-8 flex justify-center items-center gap-x-2 border-2 border-sky-600 rounded-md px-4 py-2 text-sky-600 font-bold hover:bg-sky-600 hover:text-white">
-                View on Github <Github />
-              </button>
-            </Link>
-          )}
-
-          {deployedLink && (
-            <Link href={deployedLink}>
-              <button className="my-8 flex justify-center items-center gap-x-2 border-2 border-sky-600 rounded-md px-4 py-2 text-sky-600 font-bold hover:bg-sky-600 hover:text-white">
-                View live website <ExternalLink />
-              </button>
-            </Link>
-          )}
+      <div className="flex flex-col gap-y-4">
+        <div className="flex flex-col unreset">
+          {documentToReactComponents(fullDetails, renderOption)}
         </div>
       </div>
-    </>
+      <div className="flex gap-x-8">
+        {githubLink && (
+          <Link href={githubLink}>
+            <button className="my-8 flex justify-center items-center gap-x-2 border-2 border-blue-700 rounded-md px-4 py-2 text-blue-700 font-bold hover:bg-blue-700 hover:text-slate-50">
+              View on Github <Github />
+            </button>
+          </Link>
+        )}
+
+        {deployedLink && (
+          <Link href={deployedLink}>
+            <button className="my-8 flex justify-center items-center gap-x-2 border-2 border-blue-700 rounded-md px-4 py-2 text-blue-700 font-bold hover:bg-blue-700 hover:text-slate-50">
+              View live website <ExternalLink />
+            </button>
+          </Link>
+        )}
+      </div>
+      <Footer />
+    </div>
   );
 }

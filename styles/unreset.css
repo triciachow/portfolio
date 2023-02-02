@@ -3,7 +3,7 @@
     @apply text-blue-700 underline;
   }
   p {
-    @apply my-4;
+    @apply mb-6;
   }
 
   blockquote,
@@ -16,27 +16,27 @@
   }
 
   h1 {
-    @apply text-4xl font-bold my-2;
+    @apply text-4xl font-bold mb-2 mt-1 font-roboto uppercase tracking-wider;
   }
 
   h2 {
-    @apply text-2xl font-bold my-3;
+    @apply text-2xl font-bold mb-2 mt-1 font-roboto uppercase tracking-wider;
   }
 
   h3 {
-    @apply text-lg font-bold my-4;
+    @apply text-lg font-bold mb-2 mt-1 font-roboto uppercase tracking-wider;
   }
 
   h4 {
-    @apply text-base font-bold my-5;
+    @apply text-base font-bold mb-2 mt-1 font-roboto uppercase tracking-wider;
   }
 
   h5 {
-    @apply text-sm font-bold my-6;
+    @apply text-sm font-bold mb-2 mt-1 font-roboto uppercase tracking-wider;
   }
 
   h6 {
-    @apply text-xs font-bold my-10;
+    @apply text-xs font-bold mb-2 mt-1 font-roboto uppercase tracking-wider;
   }
 
   article,
@@ -44,7 +44,7 @@
   nav,
   section {
     h1 {
-      @apply text-2xl font-bold my-3;
+      @apply text-2xl font-bold mb-2 mt-1 font-roboto uppercase tracking-wider;
     }
 
     article,
@@ -52,7 +52,7 @@
     nav,
     section {
       h1 {
-        @apply text-lg font-bold my-4;
+        @apply text-lg font-bold mb-2 mt-1 font-roboto uppercase tracking-wider;
       }
 
       article,
@@ -60,7 +60,7 @@
       nav,
       section {
         h1 {
-          @apply text-base font-bold my-5;
+          @apply text-base font-bold mb-2 mt-1 font-roboto uppercase tracking-wider;
         }
 
         article,
@@ -68,7 +68,7 @@
         nav,
         section {
           h1 {
-            @apply text-sm font-bold my-6;
+            @apply text-sm font-bold mb-2 mt-1 font-roboto uppercase tracking-wider;
           }
 
           article,
@@ -76,7 +76,7 @@
           nav,
           section {
             h1 {
-              @apply text-xs font-bold my-10;
+              @apply text-xs font-bold mb-2 mt-1 font-roboto uppercase tracking-wider;
             }
           }
         }
@@ -90,7 +90,7 @@
   }
 
   ol {
-    @apply list-decimal my-4 pl-10;
+    @apply list-decimal my-1 pl-10;
   }
 
   ul,

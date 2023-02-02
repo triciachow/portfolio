@@ -1,8 +1,8 @@
 import Link from "next/link";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import img from "../assets/404.svg";
+import { Loader2 } from "lucide-react";
+import Footer from "../components/Footer";
 
 export default function NotFound() {
   const router = useRouter();
@@ -14,16 +14,17 @@ export default function NotFound() {
   }, [router]);
 
   return (
-    <>
-      <div className="flex flex-col items-center gap-y-4 py-8">
-        <Image src={img} width={600} height={400} alt="" />
-        <h2 className="text-5xl font-bold my-4">
+    <div className="min-w-full min-h-screen px-6 xl:px-24 bg-circles bg-no-repeat bg-top bg-cover object-contain">
+      <div className="xl:py-[300px] lg:py-[300px] md:py-[300px] py-[150px] ">
+        <h1 className="font-roboto uppercase text-5xl text-center my-6">
           Ooopsss... That page can&apos;t be found.
-        </h2>
-        <p>
+        </h1>
+        <h2 className="text-center font-roboto text-2xl uppercase">
+          <Loader2 className="animate-spin mx-auto my-4" />
           Redirecting to <Link href="/">home</Link> in a few seconds!
-        </p>
+        </h2>
       </div>
-    </>
+      <Footer />
+    </div>
   );
 }
