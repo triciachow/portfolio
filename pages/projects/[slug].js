@@ -82,7 +82,7 @@ export default function ProjectDetails({ project }) {
   } = project.fields;
 
   return (
-    <div className="lg:w-8/12 xl:w-7/12 mx-auto py-6 px-6 xl:px-24 ">
+    <div className="lg:w-8/12 xl:w-7/12 mx-auto pt-20 py-6 px-6 xl:px-24 ">
       <header className="bg-sky-100 py-6 px-4 my-6">
         <h1 className="text-center font-roboto uppercase xl:text-5xl text-3xl text-slate-900 tracking-wider">
           {title}
