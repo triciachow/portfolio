@@ -25,7 +25,7 @@ export default function Involvements() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div className="border-2 border-blue-700 rounded-md px-4 py-2 text-blue-700 font-bold hover:bg-blue-700 hover:text-white transition ease-in-out">
+          <div className="border-2 border-blue-700 rounded-md px-4 py-2 text-blue-700 font-bold hover:bg-blue-700 hover:text-slate-50 transition ease-in-out">
             Download Resume PDF
           </div>
         </a>
