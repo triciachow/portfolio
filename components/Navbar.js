@@ -41,7 +41,7 @@ export default function Navbar() {
     <Popover>
       <div className="min-w-full fixed z-50">
         <nav
-          className="flex justify-between items-center px-6 xl:px-24 h-20 font-bold sticky top-0 z-50 bg-slate-50 dark:bg-slate-900 transition-all shadow-sm"
+          className="flex justify-between items-center px-6 xl:px-24 h-20 font-bold bg-slate-50 dark:bg-slate-900 transition-all shadow-sm"
           aria-label="Global"
         >
           <div className="flex flex-shrink-0 flex-grow items-center lg:flex-grow-0">
@@ -54,7 +54,7 @@ export default function Navbar() {
                 </div>
               </Link>
               <div className="-mr-2 flex items-center md:hidden">
-                <Popover.Button className="inline-flex items-center justify-center rounded-mdp-2">
+                <Popover.Button className="inline-flex items-center justify-center rounded-md p-2">
                   <span className="sr-only">Open main menu</span>
                   <Menu
                     className="h-6 w-6 dark:text-slate-50 text-slate-900"
