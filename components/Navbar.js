@@ -98,7 +98,7 @@ export default function Navbar() {
       >
         <Popover.Panel
           focus
-          className="absolute inset-x-0 top-0 z-50 origin-top-right transform transition md:hidden"
+          className="inset-x-4 top-4 fixed z-50 origin-top-right transform transition md:hidden"
         >
           <div className="overflow-hidden rounded-lg dark:bg-slate-900 bg-slate-50">
             <div className="flex items-center justify-between px-3 pt-2">
@@ -130,7 +130,9 @@ export default function Navbar() {
                   </div>
                 );
               })}
-              <Toggle />
+              <div className="flex justify-end">
+                <Toggle />
+              </div>
             </div>
           </div>
         </Popover.Panel>
