@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 
 export default function Resume() {
   return (
-    <div className="min-w-full px-6 xl:px-24 pb-8">
+    <div className="min-w-full pt-20 px-6 xl:px-24 pb-8">
       <div className="flex flex-col xl:w-9/12 mx-auto">
         <About />
         <Education />

@@ -110,7 +110,7 @@ export default function ProjectDetails({ project }) {
       <div className="flex gap-x-8">
         {githubLink && (
           <Link href={githubLink}>
-            <button className="my-8 flex justify-center items-center gap-x-2 border-2 border-blue-700 rounded-md px-4 py-2 text-blue-700 font-bold hover:bg-blue-700 hover:text-slate-50">
+            <button className="my-8 flex justify-center items-center gap-x-2 border-2 border-slate-900 dark:border-slate-50 rounded-md px-4 py-2 font-bold hover:bg-slate-900 hover:text-slate-50 dark:hover:text-slate-900 dark:hover:bg-slate-50 transition ease-in-out">
               View on Github <Github />
             </button>
           </Link>
@@ -118,7 +118,7 @@ export default function ProjectDetails({ project }) {
 
         {deployedLink && (
           <Link href={deployedLink}>
-            <button className="my-8 flex justify-center items-center gap-x-2 border-2 border-blue-700 rounded-md px-4 py-2 text-blue-700 font-bold hover:bg-blue-700 hover:text-slate-50">
+            <button className="my-8 flex justify-center items-center gap-x-2 border-2 border-slate-900 dark:border-slate-50 rounded-md px-4 py-2 font-bold hover:bg-slate-900 hover:text-slate-50 dark:hover:text-slate-900 dark:hover:bg-slate-50 transition ease-in-out">
               View live website <ExternalLink />
             </button>
           </Link>
