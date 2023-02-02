@@ -1,8 +1,7 @@
 export default function Footer() {
   return (
-    <footer className="text-center px-4 py-6 w-full text-slate-400 block">
-      <div>Developed by Tricia Chow</div>
-      <div>with Next.js + Tailwind CSS</div>
+    <footer className="text-right w-full uppercase font-roboto text-sm my-4">
+      Designed and developed by Tricia Chow <br /> with NextJS + TailwindCSS
     </footer>
   );
 }
