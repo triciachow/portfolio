@@ -5,6 +5,7 @@ import Keywords from "../../components/projects/Keywords";
 import { Github, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { BLOCKS } from "@contentful/rich-text-types";
+import Footer from "../../components/Footer";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -81,9 +82,9 @@ export default function ProjectDetails({ project }) {
   } = project.fields;
 
   return (
-    <div className="lg:w-8/12 xl:w-7/12 mx-auto py-6">
-      <header className="bg-sky-100 py-6 my-6">
-        <h1 className="text-center font-roboto uppercase text-5xl text-slate-900 tracking-wider">
+    <div className="lg:w-8/12 xl:w-7/12 mx-auto py-6 px-6 xl:px-24 ">
+      <header className="bg-sky-100 py-6 px-4 my-6">
+        <h1 className="text-center font-roboto uppercase xl:text-5xl text-3xl text-slate-900 tracking-wider">
           {title}
         </h1>
         <p className="text-slate-900 text-center my-4">{description}</p>
@@ -123,6 +124,7 @@ export default function ProjectDetails({ project }) {
           </Link>
         )}
       </div>
+      <Footer />
     </div>
   );
 }

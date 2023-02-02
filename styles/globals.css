@@ -8,5 +8,4 @@ html,
 body,
 #__next {
   color: #0f172a;
-  @apply h-full;
 }

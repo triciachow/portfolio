@@ -2,7 +2,6 @@ import { cert } from "../../lib/cert";
 
 export default function Involvements() {
   return (
-    <>
       <div className="flex flex-col lg:flex-row  justify-center items-center py-6 gap-4 border-b border-b-slate-300">
         <div className="font-bold h-full lg:w-2/12 w-full self-start text-blue-700 uppercase font-roboto tracking-wider">
           Certificate / Awards
@@ -17,6 +16,5 @@ export default function Involvements() {
           ))}
         </div>
       </div>
-    </>
   );
 }

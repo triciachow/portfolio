@@ -3,7 +3,6 @@ import { about } from "../../lib/about";
 
 export default function About() {
   return (
-    <>
       <div className="flex flex-col lg:flex-row gap-4 justify-center items-center py-6 border-b border-b-slate-300">
         <div className="font-bold h-full lg:w-2/12 w-full self-start text-blue-700 uppercase font-roboto tracking-wider">
           About Me
@@ -28,6 +27,5 @@ export default function About() {
           ))}
         </div>
       </div>
-    </>
   );
 }

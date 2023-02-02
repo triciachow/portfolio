@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { createClient } from "contentful";
+import Footer from "../components/Footer";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -19,12 +20,12 @@ export async function getStaticProps() {
 
 export default function Home({ projects }) {
   return (
-    <main className="h-full">
-      <header className="my-12 flex flex-col gap-y-2 w-full">
+    <main className="min-w-full h-screen px-6 xl:px-24 bg-circles bg-no-repeat bg-top bg-cover object-contain">
+      <header className="py-12 flex flex-col gap-y-2 w-full">
         <h1 className="uppercase text-[64px] font-roboto">
           Hello, I&apos;m Tricia
         </h1>
-        <p className="font-semibold text-2xl">
+        <p className="font-semibold text-2xl mb-6">
           Crafting seamless digital experiences through skilled web development
           and intuitive UI/UX design.
         </p>
@@ -68,6 +69,7 @@ export default function Home({ projects }) {
           )}
         </div>
       </section>
+      <Footer />
     </main>
   );
 }

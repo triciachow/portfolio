@@ -7,7 +7,7 @@ export default function Toggle() {
 
   return (
     <>
-      <div className="transition duration-500 ease-in-out">
+      <div className="transition duration-200 ease-in-out">
         {theme == "dark" ? (
           <Sun
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}

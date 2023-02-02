@@ -14,6 +14,9 @@ module.exports = {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
         roboto: ["Roboto Mono"],
       },
+      backgroundImage: {
+        circles: "url('/bg.svg')",
+      },
     },
   },
   variants: {
