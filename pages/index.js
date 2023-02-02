@@ -20,7 +20,7 @@ export async function getStaticProps() {
 
 export default function Home({ projects }) {
   return (
-    <main className="min-w-full h-screen px-6 xl:px-24 bg-circles bg-no-repeat bg-top bg-cover object-contain">
+    <main className="min-w-full min-h-screen pt-10 px-6 xl:px-24 bg-circles bg-no-repeat bg-top bg-cover object-contain">
       <header className="py-12 flex flex-col gap-y-2 w-full">
         <h1 className="uppercase text-[64px] font-roboto">
           Hello, I&apos;m Tricia
