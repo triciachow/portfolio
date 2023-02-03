@@ -36,7 +36,11 @@ export default function Home({ projects }) {
           {projects.map(
             item =>
               item.fields.featured && (
-                <a href={`/projects/${item.fields.slug}`} key={item.sys.id}>
+                <a
+                  href={`/projects/${item.fields.slug}`}
+                  key={item.sys.id}
+                  className="hover:-translate-y-2 transition ease-in-out hover:drop-shadow-2xl"
+                >
                   <Image
                     src={`https:${item.fields.thumbnail?.fields?.file?.url}`}
                     width="339px"
@@ -54,7 +58,11 @@ export default function Home({ projects }) {
         <div className="flex flex-wrap gap-4">
           {projects.map(item =>
             item.fields.featured == false ? (
-              <a href={`/projects/${item.fields.slug}`} key={item.sys.id}>
+              <a
+                href={`/projects/${item.fields.slug}`}
+                key={item.sys.id}
+                className="hover:-translate-y-2 transition ease-in-out hover:drop-shadow-2xl"
+              >
                 <Image
                   src={`https:${item.fields.thumbnail?.fields?.file?.url}`}
                   width="339px"
