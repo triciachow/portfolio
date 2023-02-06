@@ -21,13 +21,15 @@ export async function getStaticProps() {
 export default function Home({ projects }) {
   return (
     <main className="min-w-full min-h-screen pt-10 px-6 xl:px-24 bg-circles bg-no-repeat bg-top bg-cover object-contain">
-      <header className="py-12 flex flex-col gap-y-2 w-full">
+      <header className="py-8 flex flex-col gap-y-2 w-full">
         <h1 className="uppercase text-[64px] font-roboto">
           Hello, I&apos;m Tricia
         </h1>
         <p className="font-semibold text-2xl mb-6">
-          Crafting seamless digital experiences through skilled web development
-          and intuitive UI/UX design.
+          Here&apos;s a thing or two about me: Tech, design and sports - A web
+          developer who crafts digital experiences, a UI/UX designer who puts
+          the user first and a sports enthusiast who knows the value of
+          teamwork.
         </p>
       </header>
       <section className="mb-8">
