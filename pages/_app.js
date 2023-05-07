@@ -4,14 +4,14 @@ import { ThemeProvider } from "../context/ThemeContext";
 import "../styles/globals.css";
 
 export default function MyApp({ Component, pageProps }) {
-  return (
-    <>
-      <ThemeProvider>
-        <Layout>
-          <Navbar />
-          <Component {...pageProps} />
-        </Layout>
-      </ThemeProvider>
-    </>
-  );
+	return (
+		<>
+			<ThemeProvider>
+				{/* <Layout> */}
+				{/* <Navbar /> */}
+				<Component {...pageProps} />
+				{/* </Layout> */}
+			</ThemeProvider>
+		</>
+	);
 }

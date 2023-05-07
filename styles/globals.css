@@ -7,5 +7,6 @@
 html,
 body,
 #__next {
-  color: #0f172a;
+	color: #f9fafb;
+	background-color: #111827;
 }
