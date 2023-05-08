@@ -1,9 +1,9 @@
 .unreset {
   a {
-    @apply text-blue-700 underline;
+    @apply text-blue-400 underline;
   }
   p {
-    @apply mb-6;
+    @apply mb-10 leading-8 text-base font-normal text-gray-300;
   }
 
   blockquote,
@@ -16,11 +16,11 @@
   }
 
   h1 {
-    @apply text-4xl font-bold mb-2 mt-1 font-roboto uppercase tracking-wider;
+    @apply text-2xl font-bold mb-2 mt-1 font-roboto uppercase tracking-wider;
   }
 
   h2 {
-    @apply text-2xl font-bold mb-2 mt-1 font-roboto uppercase tracking-wider;
+    @apply text-xl font-bold mb-2 mt-1 font-roboto uppercase tracking-wider;
   }
 
   h3 {

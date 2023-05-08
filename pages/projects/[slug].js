@@ -2,10 +2,11 @@ import { createClient } from "contentful";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Image from "next/image";
 import Keywords from "../../components/projects/Keywords";
-import { Github, ExternalLink } from "lucide-react";
+import { Github, ExternalLink, MousePointer2 } from "lucide-react";
 import Link from "next/link";
 import { BLOCKS } from "@contentful/rich-text-types";
 import Footer from "../../components/Footer";
+import Navbar from "../../components/Navbar";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -82,7 +83,60 @@ export default function ProjectDetails({ project }) {
   } = project.fields;
 
   return (
-    <div className="lg:w-8/12 xl:w-7/12 mx-auto pt-20 py-6 px-6 xl:px-24 ">
+    <>
+      <Navbar />
+      <section className="min-w-full lg:px-[140px] md:px-10 px-5 py-5">
+        {/* HEADER */}
+        <div className="w-full items-center md:items-start lg:w-10/12 flex flex-col md:flex-row gap-10 bg-gray-800 p-10 rounded-2xl mx-auto mb-10">
+          <div className="min-w-[300px]">
+            <Image src="/test.png" width={300} height={300} className="" />
+          </div>
+          <div className="w-full min-h-full flex flex-col justify-between py-3">
+            <div>
+              <h4 className="text-xs text-[#7DD3FC] mb-3">Personal Project</h4>
+              <h1 className="text-xl md:text-3xl lg:text-4xl leading-[60px] font-semibold mb-10">
+                MyICA Portal
+              </h1>
+              <h2 className="text-gray-300 leading-8 mb-10">
+                A re-design on the MyICA Portal on their mobile screens.
+              </h2>
+            </div>
+            <div className="flex justify-self-end">
+              <Link href="/">
+                <a className="bg-gray-700 flex gap-x-3 px-5 py-2 rounded-lg drop-shadow-2xl">
+                  <MousePointer2 /> View Prototype
+                </a>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* START ARTICLE */}
+        <Image
+          src={`https:${featuredImage.fields.file.url}`}
+          width={featuredImage.fields.file.details.image.width}
+          height={featuredImage.fields.file.details.image.height}
+          alt="Project image"
+        />
+        <div className="flex gap-x-2 flex-wrap mb-4">
+          {keywords.map((keyword, index) => (
+            <Keywords key={index} keyword={keyword} />
+          ))}
+        </div>
+        <div className="flex flex-col gap-y-4">
+          <div className="flex flex-col unreset">
+            {documentToReactComponents(fullDetails, renderOption)}
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </>
+  );
+}
+
+{
+  /* <div className="lg:w-8/12 xl:w-7/12 mx-auto pt-20 py-6 px-6 xl:px-24 ">
       <header className="bg-sky-100 py-6 px-4 my-6">
         <h1 className="text-center font-roboto uppercase xl:text-5xl text-3xl text-slate-900 tracking-wider">
           {title}
@@ -125,6 +179,5 @@ export default function ProjectDetails({ project }) {
         )}
       </div>
       <Footer />
-    </div>
-  );
+    </div> */
 }
