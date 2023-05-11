@@ -10,7 +10,7 @@ export default function Intro() {
 						{introData.map((intro) => (
 							<div
 								key={intro.id}
-								className={`w-full min-h-full lg:max-w-[560px] bg-gray-800 p-10 rounded-2xl transition ease-in-out`}
+								className="w-full min-h-full lg:max-w-[560px] bg-gray-800 p-10 rounded-2xl transition ease-in-out"
 							>
 								<div className="flex justify-between mb-3">
 									<h3 className="font-roboto font-bold text-xs uppercase text-[#7DD3FC]">
