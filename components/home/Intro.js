@@ -7,7 +7,7 @@ export default function Intro() {
 						What&apos;s Keeping Me Busy, Here&apos;s The Scoop:
 					</h2>
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-						<div className="w-full min-h-full lg:max-w-[560px] bg-gray-800 p-10 rounded-2xl">
+						<div className="w-full min-h-[380px] lg:max-w-[560px] bg-gray-800 p-10 rounded-2xl">
 							<div className="flex justify-between mb-3">
 								<h3 className="font-roboto font-bold text-xs uppercase text-[#7DD3FC]">
 									Education
