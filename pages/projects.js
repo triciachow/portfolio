@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Header from "../components/projects/Header";
 import WorkFlow from "../components/projects/WorkFlow";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState, useEffect } from "react";
 
 export async function getStaticProps() {
@@ -26,9 +27,8 @@ export default function ProjectsPage({ projects }) {
 	const [visible, setVisible] = useState(true);
 
 	const handleScroll = () => {
-		if (window.scrollY > 300) {
+		if (window.scrollY > 500) {
 			setVisible(true);
-			console.log("more than 300");
 		} else {
 			setVisible(false);
 		}
@@ -58,42 +58,21 @@ export default function ProjectsPage({ projects }) {
 					Checkout My Projects:
 				</h2>
 				<div className="grid grid-cols-2 gap-5 lg:gap-10 w-full lg:max-w-[1160px]">
-					<div>
-						<Image
-							src="/test.png"
-							alt="Project cover"
-							width={560}
-							height={560}
-							className="rounded-2xl w-[560px]"
-						/>
-					</div>
-					<div>
-						<Image
-							src="/test.png"
-							alt="Project cover"
-							width={560}
-							height={560}
-							className="rounded-2xl w-[560px]"
-						/>
-					</div>
-					<div>
-						<Image
-							src="/test.png"
-							alt="Project cover"
-							width={560}
-							height={560}
-							className="rounded-2xl w-[560px]"
-						/>
-					</div>
-					<div>
-						<Image
-							src="/test.png"
-							alt="Project cover"
-							width={560}
-							height={560}
-							className="rounded-2xl w-[560px]"
-						/>
-					</div>
+					{projects.map((project) => (
+						<Link
+							key={project.sys.id}
+							href={`/projects/${project.fields.slug}`}
+						>
+							<a>
+								<Image
+									src={`https:${project.fields.thumbnail?.fields?.file?.url}`}
+									alt="Project cover"
+									width={560}
+									height={560}
+								/>
+							</a>
+						</Link>
+					))}
 				</div>
 			</section>
 

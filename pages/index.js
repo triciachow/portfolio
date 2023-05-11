@@ -27,9 +27,8 @@ export default function Home({ projects }) {
 	const [visible, setVisible] = useState(true);
 
 	const handleScroll = () => {
-		if (window.scrollY > 300) {
+		if (window.scrollY > 500) {
 			setVisible(true);
-			console.log("more than 300");
 		} else {
 			setVisible(false);
 		}

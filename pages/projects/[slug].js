@@ -73,9 +73,8 @@ export default function ProjectDetails({ project }) {
 	const [visible, setVisible] = useState(true);
 
 	const handleScroll = () => {
-		if (window.scrollY > 300) {
+		if (window.scrollY > 500) {
 			setVisible(true);
-			console.log("more than 300");
 		} else {
 			setVisible(false);
 		}
@@ -129,7 +128,7 @@ export default function ProjectDetails({ project }) {
 							<h4 className="text-xs text-[#7DD3FC] mb-3 uppercase">
 								{projectType}
 							</h4>
-							<h1 className="text-xl md:text-3xl lg:text-4xl leading-[60px] font-semibold mb-10">
+							<h1 className="text-xl md:text-3xl lg:text-4xl leading-[60px] font-semibold mb-4 lg:mb-10">
 								{title}
 							</h1>
 							<h2 className="text-gray-300 text-xlfont-medium mb-10">
