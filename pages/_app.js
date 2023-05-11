@@ -5,15 +5,15 @@ import "../styles/globals.css";
 import Head from "next/head";
 
 export default function MyApp({ Component, pageProps }) {
-  return (
-    <>
-      <Head>
-        <title>Tricia</title>
-      </Head>
+	return (
+		<>
+			<Head>
+				<title>Tricia</title>
+			</Head>
 
-      <ThemeProvider>
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </>
-  );
+			{/* <ThemeProvider> */}
+			<Component {...pageProps} />
+			{/* </ThemeProvider> */}
+		</>
+	);
 }

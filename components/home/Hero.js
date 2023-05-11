@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { FolderGit2, Mail, Scroll, ScrollText } from "lucide-react";
 import Link from "next/link";
+import Intro from "./Intro";
 
 export default function Hero() {
 	return (
@@ -74,6 +75,7 @@ export default function Hero() {
 					</div>
 				</div>
 			</div>
+			<Intro />
 		</>
 	);
 }

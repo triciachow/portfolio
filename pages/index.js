@@ -50,7 +50,7 @@ export default function Home({ projects }) {
 				""
 			)}
 			<Hero />
-			<Intro />
+			{/* <Intro /> */}
 
 			{/* PROJECTS */}
 			<section className="mx-auto">
