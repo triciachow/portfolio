@@ -77,6 +77,7 @@ export default function Home({ projects }) {
 					</div>
 				</div>
 			</section>
+			<Intro />
 			<Footer />
 		</>
 	);
