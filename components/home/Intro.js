@@ -4,7 +4,7 @@ export default function Intro() {
 			<section className="mx-auto">
 				<div className="min-w-full lg:px-[140px] md:px-10 px-5 py-5 flex flex-col items-center">
 					<h2 className="w-full lg:max-w-[1160px] uppercase font-roboto font-bold text-2xl justify-start mb-10">
-						What&apos;s Keeping Me Busy, Here's The Scoop:
+						What&apos;s Keeping Me Busy, Here&apos;s The Scoop:
 					</h2>
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-10">
 						{introData.map((intro) => (
