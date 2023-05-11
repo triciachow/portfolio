@@ -26,7 +26,7 @@ export default function Intro() {
 								I constantly challenge myself to think outside of the box.
 							</p>
 						</div>
-						<div className="w-full min-h-full lg:max-w-[560px] bg-gray-800 p-10 rounded-2xl">
+						{/* <div className="w-full min-h-full lg:max-w-[560px] bg-gray-800 p-10 rounded-2xl">
 							<div className="flex justify-between mb-3">
 								<h3 className="font-roboto font-bold text-xs uppercase text-[#7DD3FC]">
 									Internship
@@ -85,7 +85,7 @@ export default function Intro() {
 								this learning journey together to build and design a product for
 								the public good.
 							</p>
-						</div>
+						</div> */}
 					</div>
 				</div>
 			</section>
