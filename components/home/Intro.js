@@ -17,10 +17,10 @@ export default function Intro() {
 								</span>
 							</div>
 							<h2 className="font-semibold leading-6 text-xl mb-3">
-								Final-Year Student At Goldsmiths, University of London (SIM)
+								Final-Year Student At Goldsmiths, University of London, SIM
 							</h2>
 							<p className="text-gray-300 leading-10 mt-10">
-								I&apos;m currently knee-deep in a Computer Science (Honours)
+								I&apos;m currently knee-deep in a Computer Science Honours
 								degree, as I&apos;m working on my Final Year Project. This gives
 								me a platform to hone my passion in UI/UX and web development as
 								I constantly challenge myself to think outside of the box.
