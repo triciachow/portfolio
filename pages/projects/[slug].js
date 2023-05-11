@@ -135,12 +135,35 @@ export default function ProjectDetails({ project }) {
 								{description}
 							</h2>
 						</div>
-						<div className="flex justify-self-end">
-							<Link href={figmaLink}>
-								<a className="bg-gray-700 flex gap-x-3 px-5 py-2 rounded-lg drop-shadow-sm hover:drop-shadow-2xl">
-									<MousePointer2 /> View Prototype
-								</a>
-							</Link>
+						<div className="flex flex-col gap-5">
+							{figmaLink && (
+								<div className="flex justify-self-end">
+									<Link href={figmaLink}>
+										<a className="bg-gray-700 flex gap-x-3 px-5 py-2 rounded-lg drop-shadow-sm hover:drop-shadow-2xl">
+											<MousePointer2 /> View Prototype
+										</a>
+									</Link>
+								</div>
+							)}
+							{githubLink && (
+								<div className="flex justify-self-end">
+									<Link href={githubLink}>
+										<a className="bg-gray-700 flex gap-x-3 px-5 py-2 rounded-lg drop-shadow-sm hover:drop-shadow-2xl">
+											<Github /> View on Github
+										</a>
+									</Link>
+								</div>
+							)}
+
+							{deployedLink && (
+								<div className="flex justify-self-end">
+									<Link href={deployedLink}>
+										<a className="bg-gray-700 flex gap-x-3 px-5 py-2 rounded-lg drop-shadow-sm hover:drop-shadow-2xl">
+											<ExternalLink /> View live website
+										</a>
+									</Link>
+								</div>
+							)}
 						</div>
 					</div>
 				</div>
