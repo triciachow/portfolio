@@ -11,11 +11,12 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter", ...defaultTheme.fontFamily.sans],
+        sans: ["Work Sans", ...defaultTheme.fontFamily.sans],
         roboto: ["Roboto Mono"],
       },
       backgroundImage: {
         circles: "url('/bg.svg')",
+        tech: "url('/tech.jpg')",
       },
     },
   },

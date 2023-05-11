@@ -1,86 +1,103 @@
 import { createClient } from "contentful";
-import Image from "next/image";
 import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+import Header from "../components/projects/Header";
+import WorkFlow from "../components/projects/WorkFlow";
+import Image from "next/image";
+import React, { useState, useEffect } from "react";
 
 export async function getStaticProps() {
-  const client = createClient({
-    space: process.env.CONTENTFUL_SPACE_ID,
-    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-  });
+	const client = createClient({
+		space: process.env.CONTENTFUL_SPACE_ID,
+		accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+	});
 
-  const res = await client.getEntries({ content_type: "portfolioProjects" });
+	const res = await client.getEntries({ content_type: "portfolioProjects" });
 
-  return {
-    props: {
-      projects: res.items,
-    },
-    revalidate: 1,
-  };
+	return {
+		props: {
+			projects: res.items,
+		},
+		revalidate: 1,
+	};
 }
 
 export default function ProjectsPage({ projects }) {
-  return (
-    <div className="min-w-full min-h-screen pt-10 px-6 xl:px-24 bg-circles bg-no-repeat bg-top bg-cover">
-      <header className="py-8 flex flex-col gap-y-2 w-full ">
-        <h1 className="uppercase text-[64px] font-roboto">Projects</h1>
-        <p>
-          Web development and UI/UX design go hand in hand in creating effective
-          and user-friendly websites and applications.
-        </p>
-        <p>Typically, my project work flow would look something like this:</p>
-        <p className="mt-4 mb-2 font-semibold">
-          Research and Analysis &gt; Wireframing and Prototyping &gt; UI Design
-          &gt; Web Development &gt; Testing and Refinement &gt; Deployment
-        </p>
-      </header>
-      <section className="mb-8">
-        <h2 className="uppercase font-roboto mb-2">Featured Projects</h2>
-        <div className="flex flex-wrap gap-4">
-          {projects.map(
-            item =>
-              item.fields.featured && (
-                <a
-                  href={`/projects/${item.fields.slug}`}
-                  key={item.sys.id}
-                  className="hover:-translate-y-2 transition ease-in-out hover:drop-shadow-2xl"
-                >
-                  <Image
-                    src={`https:${item.fields.thumbnail?.fields?.file?.url}`}
-                    width="339px"
-                    height="199px"
-                    className="cursor-pointer"
-                    alt="Project cover"
-                  />
-                </a>
-              )
-          )}
-        </div>
-      </section>
-      <section>
-        <h2 className="uppercase font-roboto mb-2">Other Projects</h2>
-        <div className="flex flex-wrap gap-4">
-          {projects.map(item =>
-            item.fields.featured == false ? (
-              <a
-                href={`/projects/${item.fields.slug}`}
-                key={item.sys.id}
-                className="hover:-translate-y-2 transition ease-in-out hover:drop-shadow-2xl"
-              >
-                <Image
-                  src={`https:${item.fields.thumbnail?.fields?.file?.url}`}
-                  width="339px"
-                  height="199px"
-                  className="cursor-pointer"
-                  alt="Project cover"
-                />
-              </a>
-            ) : (
-              ""
-            )
-          )}
-        </div>
-      </section>
-      <Footer />
-    </div>
-  );
+	const [visible, setVisible] = useState(true);
+
+	const handleScroll = () => {
+		if (window.scrollY > 300) {
+			setVisible(true);
+			console.log("more than 300");
+		} else {
+			setVisible(false);
+		}
+	};
+
+	useEffect(() => {
+		window.addEventListener("scroll", handleScroll);
+
+		return () => window.removeEventListener("scroll", handleScroll);
+	}, []);
+
+	return (
+		<>
+			{visible ? (
+				<div className={`w-full fixed z-50 backdrop-blur-xl bg-gray-900/2`}>
+					<Navbar />
+				</div>
+			) : (
+				""
+			)}
+			<Navbar />
+			<Header />
+			<WorkFlow />
+
+			<section className="min-w-full lg:px-[140px] md:px-10 px-5 py-5 flex flex-col items-center">
+				<h2 className="w-full lg:max-w-[1160px] uppercase font-roboto font-bold text-2xl justify-start mb-10">
+					Checkout My Projects:
+				</h2>
+				<div className="grid grid-cols-2 gap-5 lg:gap-10 w-full lg:max-w-[1160px]">
+					<div>
+						<Image
+							src="/test.png"
+							alt="Project cover"
+							width={560}
+							height={560}
+							className="rounded-2xl w-[560px]"
+						/>
+					</div>
+					<div>
+						<Image
+							src="/test.png"
+							alt="Project cover"
+							width={560}
+							height={560}
+							className="rounded-2xl w-[560px]"
+						/>
+					</div>
+					<div>
+						<Image
+							src="/test.png"
+							alt="Project cover"
+							width={560}
+							height={560}
+							className="rounded-2xl w-[560px]"
+						/>
+					</div>
+					<div>
+						<Image
+							src="/test.png"
+							alt="Project cover"
+							width={560}
+							height={560}
+							className="rounded-2xl w-[560px]"
+						/>
+					</div>
+				</div>
+			</section>
+
+			<Footer />
+		</>
+	);
 }
