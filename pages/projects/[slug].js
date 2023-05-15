@@ -170,12 +170,16 @@ export default function ProjectDetails({ project }) {
 
 				{/* START ARTICLE */}
 				<div className="mx-auto w-full lg:max-w-[960px]">
-					<Image
-						src={`https:${featuredImage.fields.file.url}`}
-						width={featuredImage.fields.file.details.image.width}
-						height={featuredImage.fields.file.details.image.height}
-						alt="Project image"
-					/>
+					<div className="w-full mx-auto flex justify-center">
+						<Image
+							src={`https:${featuredImage.fields.file.url}`}
+							// width={960}
+							// height={630}
+							width={featuredImage.fields.file.details.image.width}
+							height={featuredImage.fields.file.details.image.height}
+							alt="Project image"
+						/>
+					</div>
 					<div className="flex gap-x-2 flex-wrap mb-4">
 						{keywords.map((keyword, index) => (
 							<Keywords key={index} keyword={keyword} />
