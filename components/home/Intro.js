@@ -67,25 +67,6 @@ export default function Intro() {
 								clients.
 							</p>
 						</div>
-						<div className="w-full min-h-[380px] lg:max-w-[560px] bg-gray-800 p-10 rounded-2xl">
-							<div className="flex justify-between mb-3">
-								<h3 className="font-roboto font-bold text-xs uppercase text-[#7DD3FC]">
-									Hackathon
-								</h3>
-								<span className="bg-gray-900 text-green-400 px-2 py-1 rounded text-center text-xs">
-									Jun - Jul &apos;23
-								</span>
-							</div>
-							<h2 className="font-semibold leading-6 text-xl mb-3">
-								Build for Good
-							</h2>
-							<p className="text-gray-300 leading-10 mt-10">
-								An up-coming month-long hackathon organised by Open Government
-								Products. Together with a another team mate, we will embark on
-								this learning journey together to build and design a product for
-								the public good.
-							</p>
-						</div>
 					</div>
 				</div>
 			</section>
