@@ -4,7 +4,7 @@ export default function Intro() {
 			<section className="mx-auto">
 				<div className="min-w-full lg:px-[140px] md:px-10 px-5 py-5 flex flex-col items-center">
 					<h2 className="w-full lg:max-w-[1160px] uppercase font-roboto font-bold text-2xl justify-start mb-10">
-						What&apos;s Keeping Me Busy, Here&apos;s The Scoop:
+						What&apos;s Keeping Me Busy:
 					</h2>
 					<div className="min-h-ful grid grid-cols-1 md:grid-cols-2 gap-10">
 						<div className="w-full min-h-[380px] lg:max-w-[560px] bg-gray-800 p-10 rounded-2xl">
@@ -32,11 +32,11 @@ export default function Intro() {
 									Internship
 								</h3>
 								<span className="bg-gray-900 text-green-400 px-2 py-1 rounded text-center text-xs">
-									Apr - Jul &apos;23
+									Apr - Jun &apos;23
 								</span>
 							</div>
 							<h2 className="font-semibold leading-6 text-xl mb-3">
-								Part-time UI/UX Developer at Webby Group
+								Part-time UI/UX Developer at Webby Group (Remote)
 							</h2>
 							<p className="text-gray-300 leading-10 mt-10">
 								In this internship, I get to put my skills into practice and see
@@ -47,7 +47,7 @@ export default function Intro() {
 								challenge me to grow as a developer.
 							</p>
 						</div>
-						<div className="w-full min-h-[380px] lg:max-w-[560px] bg-gray-800 p-10 rounded-2xl">
+						{/* <div className="w-full min-h-[380px] lg:max-w-[560px] bg-gray-800 p-10 rounded-2xl">
 							<div className="flex justify-between mb-3">
 								<h3 className="font-roboto font-bold text-xs uppercase text-[#7DD3FC]">
 									Work
@@ -66,7 +66,7 @@ export default function Intro() {
 								collaboration, and responsiveness throughout the process with my
 								clients.
 							</p>
-						</div>
+						</div> */}
 					</div>
 				</div>
 			</section>

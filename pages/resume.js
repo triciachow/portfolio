@@ -9,7 +9,7 @@ export default function Resume() {
 			<Navbar />
 			<section className="min-w-full lg:px-[140px] md:px-10 px-5 py-5 flex flex-col items-center mb-[400px]">
 				<a
-					href="/Resume_May_2023.pdf"
+					href="/Resume_June_2023.pdf"
 					download
 					target="_blank"
 					rel="noopener noreferrer"
