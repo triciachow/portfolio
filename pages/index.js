@@ -35,6 +35,7 @@ export default function Home({ projects }) {
 	};
 
 	useEffect(() => {
+		handleScroll();
 		window.addEventListener("scroll", handleScroll);
 
 		return () => window.removeEventListener("scroll", handleScroll);
@@ -42,12 +43,10 @@ export default function Home({ projects }) {
 
 	return (
 		<>
-			{visible ? (
+			{visible && (
 				<div className={`w-full fixed z-50 backdrop-blur-xl bg-gray-900/2`}>
 					<Navbar />
 				</div>
-			) : (
-				""
 			)}
 			<Hero />
 			<Intro />
