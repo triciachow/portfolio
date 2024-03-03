@@ -13,7 +13,7 @@ export default function Navbar() {
 	return (
 		<>
 			<div className="mx-auto">
-				<nav className="min-w-full lg:px-[140px] md:px-10 px-5">
+				<nav className="min-w-full lg:px-[100px] md:px-10 px-5">
 					<div className="flex justify-center">
 						<ul
 							className={`w-full lg:max-w-[1160px] lg:flex-row ${
@@ -56,7 +56,7 @@ export default function Navbar() {
 								>
 									<Link href={link.href}>
 										<a
-											className={`flex justify-center gap-x-8 font-medium leading-6 p-5 rounded-lg w-full hover:bg-gray-700 transition-all ease-in-out hover:cursor-pointer hover:rounded-lg ${
+											className={`flex justify-left gap-x-8 font-medium leading-6 p-5 rounded-lg w-full hover:bg-gray-700 transition-all ease-in-out hover:cursor-pointer hover:rounded-lg ${
 												path === link.href ? `bg-gray-700` : ``
 											}`}
 										>

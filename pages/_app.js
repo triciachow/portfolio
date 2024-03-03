@@ -8,7 +8,7 @@ export default function MyApp({ Component, pageProps }) {
 	return (
 		<>
 			<Head>
-				<title>Tricia</title>
+				<title>Tricia Chow</title>
 			</Head>
 
 			{/* <ThemeProvider> */}

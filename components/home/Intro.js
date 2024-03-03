@@ -6,18 +6,18 @@ export default function Intro() {
 					<h2 className="w-full lg:max-w-[1160px] uppercase font-roboto font-bold text-2xl justify-start mb-10">
 						What&apos;s Keeping Me Busy:
 					</h2>
-					<div className="min-h-ful grid grid-cols-1 md:grid-cols-2 gap-10">
+					<div className="min-h-full grid grid-cols-1 md:grid-cols-2 gap-10">
 						<div className="w-full min-h-[380px] lg:max-w-[560px] bg-gray-800 p-10 rounded-2xl">
 							<div className="flex justify-between mb-3">
 								<h3 className="font-roboto font-bold text-xs uppercase text-[#7DD3FC]">
-									Education
+									Current employment
 								</h3>
 								<span className="bg-gray-900 text-green-400 px-2 py-1 rounded text-center text-xs">
-									Oct &apos;20 - Sep &apos;23
+									Jul 23 - Current
 								</span>
 							</div>
 							<h2 className="font-semibold leading-6 text-xl mb-3">
-								Final-Year Student At Goldsmiths, University of London, SIM
+								UX Designer, Wizlah
 							</h2>
 							<p className="text-gray-300 leading-10 mt-10">
 								I&apos;m currently knee-deep in a Computer Science Honours
@@ -47,26 +47,6 @@ export default function Intro() {
 								challenge me to grow as a developer.
 							</p>
 						</div>
-						{/* <div className="w-full min-h-[380px] lg:max-w-[560px] bg-gray-800 p-10 rounded-2xl">
-							<div className="flex justify-between mb-3">
-								<h3 className="font-roboto font-bold text-xs uppercase text-[#7DD3FC]">
-									Work
-								</h3>
-								<span className="bg-gray-900 text-green-400 px-2 py-1 rounded text-center text-xs">
-									Dec &apos;22 - Present
-								</span>
-							</div>
-							<h2 className="font-semibold leading-6 text-xl mb-3">
-								Freelance Web Developer
-							</h2>
-							<p className="text-gray-300 leading-10 mt-10">
-								My goal is to empower small businesses to succeed in the digital
-								world. I help build and design websites that reflect their brand
-								and goals. I place a strong emphasis on communication,
-								collaboration, and responsiveness throughout the process with my
-								clients.
-							</p>
-						</div> */}
 					</div>
 				</div>
 			</section>

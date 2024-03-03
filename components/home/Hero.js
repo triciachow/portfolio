@@ -7,11 +7,11 @@ export default function Hero() {
 	return (
 		<>
 			{/* HEORO SECTION */}
-			<div className="min-w-full lg:px-[140px] md:px-10 px-5 py-5 mx-auto">
+			<div className="min-w-full lg:px-[100px] md:px-10 px-5 py-5 mx-auto">
 				{/* HORIZONTAL CONTAINER */}
 				<div className="h-full flex lg:flex-row flex-col justify-center gap-10 pt-5 lg:pt-10 pb-5">
 					{/* LEFT SIDE */}
-					<div className="flex flex-col gap-y-10 w-full lg:w-[360px]">
+					<div className="flex flex-col gap-y-10 w-full lg:w-[300px]">
 						<Link href="/">
 							<a>
 								<div className="w-full bg-tech bg-cover bg-center min-h-[204px] rounded-2xl">
@@ -47,30 +47,54 @@ export default function Hero() {
 						</ul>
 					</div>
 					{/* RIGHT SIDE */}
-					<div className="h-ful w-full lg:w-[760px] p-10 bg-gray-800 rounded-2xl flex flex-col items-center lg:flex-row gap-10">
-						<div className="w-full lg:max-w-[380px] flex flex-col">
-							<h3 className="font-roboto font-bold text-xs uppercase text-[#7DD3FC] mb-3">
-								Hello there, I&apos;m Tricia
-							</h3>
-							<h1 className="font-semibold text-4xl leading-10 mb-10">
-								A UI/UX Developer
-							</h1>
-							<p className="text-gray-300 leading-10">
-								I craft meaningful digital experiences, with a passion to
-								problem-solve and deliver user-friendly solutions. In addition,
-								I bring prior experience working in marketing and communication
-								to my work, which allows me to approach projects from a
-								well-rounded perspective.
-							</p>
+					<div className="min-h-full w-full lg:w-[800px] lg:p-10 p-6 bg-gray-800 rounded-2xl flex flex-col items-start justify-between gap-10">
+						<div className="w-full flex flex-col md:flex-row justify-center md:justify-between gap-4">
+							<div className="lg:max-w-[450px] w-full">
+								<h3 className="font-roboto font-bold text-xs uppercase text-[#7DD3FC] mb-3">
+									Hello there,
+								</h3>
+								<h1 className="font-semibold text-4xl leading-10 mb-10">
+									I&apos;m Tricia
+								</h1>
+								<p className="text-gray-300 leading-10">
+									I craft meaningful digital experiences, with a passion to
+									problem-solve and deliver user-friendly solutions.
+									Additionally, I have previous experiences working in marketing
+									and communications.
+								</p>
+							</div>
+							<div className="bg-[url(/tricia.jpeg')] bg-center bg-cover w-full md:w-[189px] h-[288px] rounded-2xl flex items-center md:hidden lg:block">
+								<Image
+									src="/tricia.jpeg"
+									alt="Tricia"
+									width={189}
+									height={288}
+									className="rounded-2xl"
+								/>
+							</div>
 						</div>
-						<div className="bg-[url(/tricia.jpeg')] bg-center bg-cover w-full md:w-[260px] h-[396px] rounded-2xl">
+
+						{/* EMPLOYMENT */}
+						<div className="flex md:flex-row items-start w-full gap-4">
 							<Image
-								src="/tricia.jpeg"
+								src="/wizlah-logo.svg"
 								alt="Tricia"
-								width={260}
-								height={396}
-								className="rounded-2xl"
+								width={60}
+								height={60}
 							/>
+							<div className="w-full">
+								<div className="flex flex-col md:flex-row justify-between">
+									<h3 className="font-roboto font-bold text-xs uppercase text-[#7DD3FC]">
+										Current employment
+									</h3>
+									<div className="w-[120px] md:w-auto bg-gray-900 text-green-400 px-2 py-1 my-2 md:my-0 rounded text-center text-xs">
+										Jul 23 - Current
+									</div>
+								</div>
+								<h2 className="font-semibold leading-6 text-xl mb-3">
+									UX Designer, Wizlah
+								</h2>
+							</div>
 						</div>
 					</div>
 				</div>

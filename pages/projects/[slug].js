@@ -112,7 +112,7 @@ export default function ProjectDetails({ project }) {
 				""
 			)}
 			<Navbar />
-			<section className="mx-auto lg:px-[140px] md:px-10 px-5 py-5">
+			<section className="mx-auto lg:px-[100px] md:px-10 px-5 py-5">
 				{/* HEADER */}
 				<div className="lg:max-w-[1160px] w-full items-center md:items-start flex flex-col md:flex-row gap-10 bg-gray-800 p-10 rounded-2xl mx-auto mb-10">
 					<div className="min-w-[300px]">

@@ -49,11 +49,11 @@ export default function Home({ projects }) {
 				</div>
 			)}
 			<Hero />
-			<Intro />
+			{/* <Intro /> */}
 
 			{/* PROJECTS */}
 			<section className="mx-auto">
-				<div className="min-w-full lg:px-[140px] md:px-10 px-5 py-5 flex flex-col items-center">
+				<div className="min-w-full lg:px-[100px] md:px-10 px-5 py-5 flex flex-col items-center">
 					<h2 className="w-full lg:max-w-[1160px] uppercase font-roboto font-bold text-2xl justify-start mb-10">
 						Checkout My Projects:
 					</h2>
