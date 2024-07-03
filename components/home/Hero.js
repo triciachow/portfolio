@@ -57,10 +57,12 @@ export default function Hero() {
 									I&apos;m Tricia
 								</h1>
 								<p className="text-gray-300 leading-10">
-									I craft meaningful digital experiences, with a passion to
-									problem-solve and deliver user-friendly solutions.
-									Additionally, I have previous experiences working in marketing
-									and communications.
+									They say the best bridges are built by those who understand
+									both sides. That&apos;s my approach to UI/UX design. With a
+									background in computer science, I bridge the gap between
+									technical functionality and user needs. My passion lies in
+									crafting digital experiences that are meaningful, to deliver
+									user-friendly solutions that resonate on a deeper level.
 								</p>
 							</div>
 							<div className="bg-[url(/tricia.jpeg')] bg-center bg-cover w-full md:w-[189px] h-[288px] rounded-2xl flex items-center md:hidden lg:block">
