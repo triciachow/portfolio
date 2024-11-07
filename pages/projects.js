@@ -50,8 +50,8 @@ export default function ProjectsPage({ projects }) {
 				""
 			)}
 			<Navbar />
-			<Header />
-			<WorkFlow />
+			{/* <Header /> */}
+			{/* <WorkFlow /> */}
 
 			<section className="min-w-full lg:px-[100px] md:px-10 px-5 py-5 flex flex-col items-center">
 				<h2 className="w-full lg:max-w-[1160px] uppercase font-roboto font-bold text-2xl justify-start mb-10">

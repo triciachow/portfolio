@@ -90,7 +90,7 @@ export default function Hero() {
 										Current employment
 									</h3>
 									<div className="w-[120px] md:w-auto bg-gray-900 text-green-400 px-2 py-1 my-2 md:my-0 rounded text-center text-xs">
-										Jul 23 - Current
+										Jul 23 - Present
 									</div>
 								</div>
 								<h2 className="font-semibold leading-6 text-xl mb-3">

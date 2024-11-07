@@ -5,7 +5,7 @@ export default function MyDocument() {
 		<Html>
 			<Head>
 				<meta name="description" content="Tricia's personal portfolio." />
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href="/amber.ico" />
 				<link rel="preconnect" href="https://fonts.googleapis.com" />
 				<link
 					rel="preconnect"
