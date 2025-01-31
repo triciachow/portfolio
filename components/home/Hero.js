@@ -11,11 +11,11 @@ export default function Hero() {
 				{/* HORIZONTAL CONTAINER */}
 				<div className="h-full flex lg:flex-row flex-col justify-center gap-10 pt-5 lg:pt-10 pb-5">
 					{/* LEFT SIDE */}
-					<div className="flex flex-col gap-y-10 w-full lg:w-[300px]">
+					<div className="h-full flex flex-col gap-y-10 w-full lg:w-[300px]">
 						<Link href="/">
 							<a>
-								<div className="w-full bg-tech bg-cover bg-center min-h-[204px] rounded-2xl">
-									<div className="bg-gray-900/30 backdrop-brightness-75 w-full min-h-[204px] flex justify-center items-center rounded-2xl">
+								<div className="w-full bg-tech bg-cover bg-center min-h-[300px] rounded-2xl">
+									<div className="bg-gray-900/30 backdrop-brightness-75 w-full min-h-[300px] flex justify-center items-center rounded-2xl">
 										<Image
 											src="/logo.svg"
 											alt="Tricia logo"
@@ -28,7 +28,7 @@ export default function Hero() {
 						</Link>
 
 						{/* MENU */}
-						<ul className="h-full flex flex-col p-5 justify-center items-center rounded-2xl bg-gray-800">
+						<ul className="flex flex-col p-5 justify-center items-center rounded-2xl bg-gray-800">
 							{navLinks.map((link) => (
 								<li key={link.id} className="w-full">
 									<Link href={link.href}>
